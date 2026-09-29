@@ -11,7 +11,7 @@ env:
   MONGODB_CLUSTER_ADDRESS: "@cluster0.r7hrja1.mongodb.net"
   MONGODB_USERNAME: "dheeraj"
   MONGODB_PASSWORD: "YOUR_PASSWORD"
-  PORT: 8580
+  PORT: 8080
 
 jobs:
   test:
