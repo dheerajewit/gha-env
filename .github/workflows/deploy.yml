@@ -8,7 +8,7 @@ on:
 
 env:
   MONGO_DB_NAME: gha-demo
-  MONGODB_CLUSTER_ADDRESS: "@cluster0.ps0spdp.mongodb.net"
+  MONGODB_CLUSTER_ADDRESS: mongodb+srv://<db_username>:<db_password>@cluster0.ps0spdp.mongodb.net/?appName=Cluster0
   MONGODB_USERNAME: dheerajck
   MONGODB_PASSWORD: CmHyHv92M8wDKA8
   PORT: 8080
