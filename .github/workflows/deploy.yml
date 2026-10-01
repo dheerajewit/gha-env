@@ -8,9 +8,9 @@ on:
 
 env:
   MONGO_DB_NAME: gha-demo
-  MONGODB_CLUSTER_ADDRESS: cluster0.x85crrq.mongodb.net
-  MONGODB_USERNAME: dheeraj
-  MONGODB_PASSWORD: aASyA2xBRHtzmkm2
+  MONGODB_CLUSTER_ADDRESS: @cluster0.ps0spdp.mongodb.net 
+  MONGODB_USERNAME: dheerajck
+  MONGODB_PASSWORD: CmHyHv92M8wDKA8A
   PORT: 8080
 
 jobs:
