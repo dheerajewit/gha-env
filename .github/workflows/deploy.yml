@@ -8,7 +8,7 @@ on:
 
 env:
   MONGO_DB_NAME: gha-demo
-  MONGODB_CLUSTER_ADDRESS: "@cluster0.x85crrq.mongodb.net"
+  MONGODB_CLUSTER_ADDRESS: cluster0.x85crrq.mongodb.net
   MONGODB_USERNAME: dheerajgowda460_db_user
   MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
   PORT: 8080
@@ -19,7 +19,7 @@ jobs:
 
     steps:
       - name: Get Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install dependencies
         run: npm ci
@@ -34,8 +34,8 @@ jobs:
 
       - name: Output information
         run: |
-          echo "MONGODB_USERNAME: ${{ env.MONGODB_USERNAME }}"
-          echo "MONGODB_DB_NAME: ${{ env.MONGO_DB_NAME }}"
+          echo "MONGODB_USERNAME: $MONGODB_USERNAME"
+          echo "MONGODB_DB_NAME: $MONGO_DB_NAME"
 
   deploy:
     needs: test
@@ -43,9 +43,12 @@ jobs:
 
     steps:
       - name: Get Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
+      - name: Get Code
+        uses: actions/checkout@v4
 
       - name: Output information
         run: |
-          echo "MONGODB_USERNAME: ${{ env.MONGODB_USERNAME }}"
-          echo "MONGODB_DB_NAME: ${{ env.MONGO_DB_NAME }}"
+          echo "MONGODB_USERNAME: $MONGODB_USERNAME"
+          echo "MONGODB_DB_NAME: $MONGO_DB_NAME"
