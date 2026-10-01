@@ -8,9 +8,9 @@ on:
 
 env:
   MONGO_DB_NAME: gha-demo
-  MONGODB_CLUSTER_ADDRESS: @cluster0.x85crrq.mongodb.net
+  MONGODB_CLUSTER_ADDRESS: "@cluster0.x85crrq.mongodb.net"
   MONGODB_USERNAME: dheerajgowda460_db_user
-  MONGODB_PASSWORD: 4NKEcKzhTaG8fkZ2
+  MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
   PORT: 8080
 
 jobs:
@@ -25,7 +25,9 @@ jobs:
         run: npm ci
 
       - name: Run server
-        run: npm start & npx wait-on http://127.0.0.1:$PORT
+        run: |
+          npm start &
+          npx wait-on http://127.0.0.1:$PORT
 
       - name: Run tests
         run: npm test
