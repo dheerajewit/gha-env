@@ -16,7 +16,6 @@ console.log('Trying to connect to db');
 
 try {
   await client.connect();
-
   await client.db(dbName).command({ ping: 1 });
 
   console.log('Connected successfully to server');
