@@ -8,9 +8,9 @@ on:
 
 env:
   MONGO_DB_NAME: gha-demo
-  MONGODB_CLUSTER_ADDRESS: @cluster0.ps0spdp.mongodb.net 
+  MONGODB_CLUSTER_ADDRESS: "@cluster0.ps0spdp.mongodb.net"
   MONGODB_USERNAME: dheerajck
-  MONGODB_PASSWORD: CmHyHv92M8wDKA8A
+  MONGODB_PASSWORD: CmHyHv92M8wDKA8
   PORT: 8080
 
 jobs:
@@ -42,9 +42,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Get Code
-        uses: actions/checkout@v4
-
       - name: Get Code
         uses: actions/checkout@v4
 
